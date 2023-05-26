@@ -1,0 +1,56 @@
+#Label { -fx-font-family: "Times New Roman"; 
+    -fx-font-style: italic;
+    -fx-font-size: 16px;
+    -fx-text-fill: blue;
+}
+ { -fx-font-family: "Times New Roman"; 
+    -fx-font-style: italic;
+    -fx-font-size: 16px;
+    -fx-text-fill: blue;
+}
+
+#MiniText { -fx-font-family: "Times New Roman"; 
+    -fx-font-style: italic;
+    -fx-font-size: 12px;
+    -fx-text-fill: grey;
+}
+
+
+#fondo { -fx-background-color: #f900002a; 
+          
+}
+
+#Button1 { -fx-background-color: skyblue;
+    -fx-border-color: #FFFFFF;
+    -fx-border-width: 2;
+    -fx-text-fill: white;
+    -fx-font-family: "Georgia";
+    -fx-font-style: italic;
+    -fx-font-size: 22px;
+    -fx-background-radius: 5 5 5 5;
+    -fx-border-radius: 5 5 5 5;
+}
+#Button2 { -fx-background-color: skyblue;
+    -fx-border-color: #FFFFFF;
+    -fx-border-width: 2;
+    -fx-text-fill: white;
+    -fx-font-family: "Georgia";
+    -fx-font-style: italic;
+    -fx-font-size: 10px;
+    -fx-background-radius: 10 10 10 10;
+    -fx-border-radius: 10 10 10 10;
+}
+
+#autor { -fx-font-family: "Times New Roman";
+    -fx-text-fill: #660099;
+    -fx-font-size: 12px;
+}
+
+Button:hover { -fx-background-color: #333333;
+          -fx-font-size: 22px;
+}
+
+Button:pressed { -fx-background-color: #FFFFFF;
+            -fx-text-fill: #000000;
+        -fx-font-weight: bold;
+}

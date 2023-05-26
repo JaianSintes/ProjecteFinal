@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<TabPane fx:id="Panel" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="446.0" prefWidth="600.0" stylesheets="@project.css" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="jordi.sintes.projectefinal.HelloController">
+    <tabs>
+        <Tab text="Entrada de Producte">
+            <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" stylesheets="@project.css">
+                    <children>
+                        <TextField id="fondo" fx:id="entradaNom" layoutX="304.0" layoutY="45.0" prefHeight="24.0" prefWidth="284.0" />
+                        <TextField id="fondo" fx:id="entradaPreu" layoutX="304.0" layoutY="109.0" prefHeight="24.0" prefWidth="285.0" />
+                        <Label id="Label" fx:id="Nom" layoutX="437.0" layoutY="14.0" stylesheets="@project.css" text="Nom" />
+                        <Label id="Label" layoutX="435.0" layoutY="82.0" text="Preu €" />
+                        <Label id="Label" layoutX="419.0" layoutY="146.0" stylesheets="@project.css" text="Descripcio" />
+                        <Button id="Button1" fx:id="entradaGuarda" layoutX="55.0" layoutY="314.0" mnemonicParsing="false" onAction="#guardarProducte" text="Guarda" />
+                        <Label id="Label" layoutX="402.0" layoutY="251.0" stylesheets="@project.css" text="Data Caducitat" />
+                        <TextArea fx:id="llistaEntrada" layoutX="16.0" layoutY="206.0" prefHeight="66.0" prefWidth="212.0" />
+                        <Text id="MiniText" fx:id="resultatNom" layoutX="16.0" layoutY="143.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nom" wrappingWidth="158.341796875" />
+                        <Text id="MiniText" fx:id="resultatPreu" layoutX="16.0" layoutY="182.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Preu" wrappingWidth="158.341796875" />
+                        <Text fx:id="entradaCaducitat02" layoutX="14.0" layoutY="292.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Data Caducitat" wrappingWidth="139.7294921875" />
+                        <DatePicker id="fondo" fx:id="entradaCad" layoutX="354.0" layoutY="271.0" />
+                        <ScrollPane layoutX="306.0" layoutY="170.0" prefHeight="72.0" prefWidth="281.0">
+                            <content>
+                                <AnchorPane id="fondo" minHeight="0.0" minWidth="0.0" prefHeight="53.0" prefWidth="282.0">
+                           <children>
+                              <TextField id="fondo" fx:id="entradaDesc" prefHeight="55.0" prefWidth="284.0" />
+                           </children></AnchorPane>
+                            </content>
+                        </ScrollPane>
+                    </children></AnchorPane>
+            </content>
+        </Tab>
+        <Tab text="Sortida de Producte">
+            <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="382.0" prefWidth="600.0" stylesheets="@project.css">
+                    <children>
+                        <TextField id="fondo" fx:id="sortidaNom" layoutX="317.0" layoutY="45.0" prefHeight="29.0" prefWidth="271.0" />
+                        <TextField id="fondo" fx:id="sortidaPreu" layoutX="318.0" layoutY="109.0" prefHeight="29.0" prefWidth="269.0" />
+                        <Label id="Label" layoutX="442.0" layoutY="25.0" text="Nom" />
+                        <Label id="Label" layoutX="435.0" layoutY="83.0" text="Preu €" />
+                        <Label id="Label" layoutX="421.0" layoutY="153.0" text="Descripcio" />
+                        <Button id="Button1" fx:id="sortidaCerca" layoutX="428.0" layoutY="362.0" mnemonicParsing="false" onAction="#buscarProductes" text="Cerca" />
+                        <Label id="Label" layoutX="402.0" layoutY="271.0" text="Data Caducitat" />
+                        <TextArea fx:id="llistaSortida" layoutX="17.0" layoutY="198.0" prefHeight="66.0" prefWidth="212.0" />
+                        <Text id="MiniText" fx:id="resultatSortidaNom" layoutX="17.0" layoutY="135.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nom" wrappingWidth="158.341796875" />
+                        <Text id="MiniText" fx:id="resultatSortidaPreu" layoutX="17.0" layoutY="174.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Preu" wrappingWidth="158.341796875" />
+                        <Text id="MiniText" fx:id="sortidaCaducitat02" layoutX="14.0" layoutY="292.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Data Caducitat" wrappingWidth="139.7294921875" />
+                        <DatePicker fx:id="sortidaCad" layoutX="344.0" layoutY="309.0" />
+                        <Button id="Button2" fx:id="dreta" layoutX="108.0" layoutY="307.0" mnemonicParsing="false" onAction="#mostrarSeguentResultat" text="&gt;" />
+                        <Button id="Button2" fx:id="totDreta" layoutX="154.0" layoutY="307.0" mnemonicParsing="false" onAction="#mostrarUltimResultat" prefHeight="34.0" prefWidth="60.0" text="&gt;&gt;" />
+                        <Button id="Button2" fx:id="esquerra" layoutX="69.0" layoutY="307.0" mnemonicParsing="false" onAction="#mostrarAnteriorResultat" text="&lt;" />
+                        <Button id="Button2" fx:id="totEsquerra" layoutX="16.0" layoutY="307.0" mnemonicParsing="false" onAction="#mostrarPrimerResultat" text="&lt;&lt;" />
+                        <Button id="Button1" fx:id="sortidaTreu" layoutX="57.0" layoutY="362.0" mnemonicParsing="false" onAction="#treureProducte" prefHeight="24.0" prefWidth="103.0" text="Treu" />
+                  <TextField id="fondo" fx:id="sortidaDesc" layoutX="323.0" layoutY="180.0" prefHeight="82.0" prefWidth="269.0" />
+                    </children>
+                </AnchorPane>
+            </content>
+        </Tab>
+    </tabs>
+</TabPane>
